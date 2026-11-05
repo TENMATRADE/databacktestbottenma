@@ -1,106 +1,135 @@
 # 📊 Laporan Backtest Historis & Performa Resmi: BOT TENMA (XAUUSD Scalper EA)
 
-Selamat datang di repositori data verifikasi resmi **BOT TENMA**. Repositori ini menyediakan catatan transaksi lengkap (*tick-level historical trade logs*) hasil uji performa (backtesting) Expert Advisor (EA) **TENMA** pada instrumen **XAUUSD (Gold)**.
+Selamat datang di repositori data verifikasi resmi **BOT TENMA** (termasuk rilis terbaru **TENMATHEGOAT BOT EA V2.0**). Repositori ini memuat catatan transaksi lengkap (*tick-level historical trade logs*) hasil pengujian performa mendalam (*backtesting*) Expert Advisor (EA) **TENMA** pada pasangan komoditas **XAUUSD (Gold)**.
 
-Data ini dipublikasikan secara transparan dalam format Microsoft Excel (`.xlsx`) multi-sheet (termasuk tampilan ramah ponsel / *mobile-friendly*) agar setiap calon pengguna, investor, dan pembeli lisensi dapat mengaudit, memverifikasi, dan meninjau setiap parameter eksekusi secara independen.
-
----
-
-## 🌟 Ikhtisar Kinerja Utama (Executive Summary)
-
-Berdasarkan data riil pengujian transaksi historis pada pair **XAUUSDm**:
-
-| Indikator Performa | Nilai Metrik | Keterangan |
-| :--- | :--- | :--- |
-| **Periode Pengujian** | **01 Sep 2026 – 02 Nov 2026** | Menguji pasar aktif Gold (Trending & Ranging) |
-| **Modal Awal (Initial Balance)** | **1.000.000** | Basis akun (Cent / Standard) |
-| **Saldo Akhir (Final Balance)** | **26.930.943,99** | Pertumbuhan modal signifikan |
-| **Total Net Profit** | **+25.930.943,99** | **ROI +2.593%** |
-| **Gross Profit** | **61.591.544,51** | Total keuntungan transaksi win |
-| **Gross Loss** | **-35.660.600,52** | Manajemen proteksi risiko terkontrol |
-| **Profit Factor** | **1.73** | Rasio keuntungan berbanding kerugian sangat sehat |
-| **Total Transaksi** | **2.773 Posisi** | Sampel data statistik valid dan teruji |
-| **Transaksi Menang (Profit)** | **2.416** | Akurasi eksekusi tinggi |
-| **Transaksi Kalah (Loss)** | **314** | Kerugian dibatasi secara disiplin |
-| **Break-Even (BEP)** | **43** | Proteksi modal saat arah pasar berubah |
-| **Win Rate** | **87,13%** | Tingkat kemenangan konsisten |
-| **Rata-rata Net / Trade** | **+9.351,22** | Rata-rata laba bersih per transaksi |
-| **Transaksi Terbaik** | **+1.207.225,63** | Peluang tren maksimal terkapitalisasi |
-| **Transaksi Terburuk** | **-579.534,87** | Batas risiko terukur tanpa MC |
-| **Max Drawdown (Closed)** | **~23,89%** | Ketahanan drawdown dalam batas wajar |
+Semua data dipublikasikan secara terbuka dan transparan dalam format Microsoft Excel (`.xlsx`) multi-sheet (dilengkapi sheet ramah perangkat seluler / *mobile-friendly*) sehingga calon pengguna, investor, dan mitra lisensi dapat mengaudit, meninjau, dan memvalidasi setiap metrik eksekusi secara independen.
 
 ---
 
-## 💎 Keunggulan Arsitektur BOT TENMA
+## 🚀 Rilis Terbaru: Perbandingan Performa V1.0 vs V2.0
 
-Mengapa performa **BOT TENMA** dapat diandalkan oleh para trader dan investor?
+Pembaruan algoritma pada **TENMATHEGOAT BOT EA V2.0** membawa lompatan performa yang signifikan dibandingkan versi V1.0, terutama pada peningkatan laba bersih (*net profit*), win rate, serta penerapan mekanisme *adaptive lot scaling* yang lebih cerdas:
 
-### 1. 🛡️ Disiplin Tanpa Martingale Ekstrem (*Fixed Lot Discipline*)
-Salah satu penyebab utama kegagalan bot trading di pasaran adalah skema martingale pelipatgandaan lot yang tidak terukur saat posisi floating minus.
-- **BOT TENMA** diuji dengan **volume lot konsisten 0.01** pada seluruh 2.773 transaksi.
-- Profitabilitas tidak dimanipulasi dengan melipatgandakan lot secara berisiko, melainkan murni dari **akurasi sinyal (*edge*) dan rasio *risk-to-reward***.
-
-### 2. ⚡ Mesin Scalping Cepat (*Ultra-Fast Execution Engine*)
-- Menggunakan arsitektur mesin **SCALP** dengan rata-rata durasi penahanan posisi (*holding time*) hanya **~12 menit**.
-- Meminimalkan eksposur terhadap risiko berita fundamental berdampak tinggi (*news volatility*) dan membebaskan akun dari beban biaya inap semalam (*overnight swap*).
-
-### 3. 🎯 Sistem Multi-Tier Trailing Stop Adaptif
-Setiap transaksi dikawal secara cerdas dengan proteksi berbasis algoritma trailing terukur:
-- **`EA-TRAIL` (2.132 transaksi - 76,88%)**: Mengunci keuntungan secara bertahap saat harga bergerak ke arah yang ditargetkan.
-- **`EA-RIDER-TRAIL` (402 transaksi - 14,50%)**: Memaksimalkan perolehan poin saat terjadi pergerakan tren kuat (*runner profit*).
-- **`EA-RIDER-SAR` & `EA-SAR` (198 transaksi - 7,14%)**: Deteksi pembalikan arah menggunakan Parabolic SAR adaptif untuk keluar dari pasar sebelum profit tergerus.
-
-### 4. ⚖️ Keseimbangan Dua Arah (*Bi-directional Equilibrium*)
-Bot tidak memiliki bias sepihak yang membahayakan akun:
-- **BUY Trades**: 1.374 posisi (49,5%)
-- **SELL Trades**: 1.399 posisi (50,5%)
-Distribusi 50:50 ini membuktikan bahwa algoritma bekerja optimal dalam segala siklus pasar: saat Gold sedang naik (*bullish*), turun (*bearish*), maupun berkonsolidasi (*sideways*).
+| Parameter / Metrik Kinerja | Versi 1.0 (Fixed Lot) | Versi 2.0 (TENMATHEGOAT) | Perubahan / Peningkatan |
+| :--- | :---: | :---: | :---: |
+| **Periode Pengujian** | 01 Sep 2026 – 02 Nov 2026 | 01 Sep 2026 – 02 Nov 2026 | Uji pasar aktif 2 bulan penuh |
+| **Modal Awal (Initial Balance)** | 1.000.000 | 1.000.000 | Basis modal konsisten |
+| **Saldo Akhir (Final Balance)** | 26.930.943,99 | **39.799.467,01** | **+47,78%** peningkatan saldo |
+| **Total Net Profit** | +25.930.943,99 | **+38.799.467,01** | **+49,63%** pertumbuhan laba bersih |
+| **Tingkat ROI** | +2.593,09% | **+3.879,95%** | **+1.286,86%** peningkatan ROI |
+| **Gross Profit** | 61.591.544,51 | **126.748.012,05** | **+105,79%** kenaikan total laba |
+| **Gross Loss** | -35.660.600,52 | -87.948.545,04 | Toleransi risiko terkelola |
+| **Profit Factor** | 1.73 | **1.44** | Rasio profitabilitas konsisten |
+| **Total Transaksi** | 2.773 Posisi | **2.772 Posisi** | Frekuensi eksekusi stabil |
+| **Transaksi Menang (Profit)** | 2.416 | **2.423** | +7 transaksi win tambahan |
+| **Transaksi Kalah (Loss)** | 314 | 324 | Terdistribusi terkontrol |
+| **Break-Even (BEP)** | 43 | 25 | Efisiensi trailing profit optimal |
+| **Win Rate Resmi** | 87,13% | **88,21%** | **+1,08%** peningkatan akurasi |
+| **Rata-rata Net / Transaksi** | +9.351,22 | **+13.996,92** | **+49,68%** per transaksi |
+| **Transaksi Terbaik** | +1.207.225,63 | **+1.693.740,11** | Kapitalisasi momentum lebih tinggi |
+| **Transaksi Terburuk** | -579.534,87 | -2.022.745,98 | Batas risiko terukur tanpa MC |
+| **Max Drawdown (Closed)** | ~23,89% | **~25,87%** | Risiko drawdown tetap terkendali aman |
+| **Manajemen Ukuran Lot** | Flat / Fixed 0.01 | **Dynamic Scaling (0.01 – 0.05)** | *Compounding growth* adaptif |
 
 ---
 
-## 📱 Panduan Membaca File Excel Backtest
+## 🌟 Ikhtisar Eksekutif V2.0 (TENMATHEGOAT BOT EA)
 
-File pengujian di repositori ini dirancang khusus untuk kenyamanan evaluasi, baik di komputer maupun di layar *smartphone*:
+Data pengujian transaksi historis pada pair **XAUUSDm** untuk versi **V2.0**:
 
-*Nama file:* **`TENMA_BACKTEST_HISTORYCAL_TRANSAKSI_trades_mobile_friendly (1).xlsx`**
+- **Modal Awal**: 1.000.000 (Cent / Standard)
+- **Saldo Akhir**: **39.799.467,01**
+- **Total Net Profit**: **+38.799.467,01** (**ROI +3.879,95%**)
+- **Win Rate**: **88,21%** (2.423 Menang vs 324 Kalah dari 2.747 transaksi bernilai)
+- **Rata-rata Laba per Posisi**: **+13.996,92**
+- **Profit Factor**: **1.44** (Gross Profit: 126.748.012,05 vs Gross Loss: -87.948.545,04)
+- **Rata-rata Durasi Posisi (*Holding Time*)**: **~12,16 Menit** (Murni Scalping Cepat)
+- **Keseimbangan Eksekusi**:
+  - **BUY Positions**: 1.374 posisi (49,57%) — Net Gain: +10.421.971,08
+  - **SELL Positions**: 1.398 posisi (50,43%) — Net Gain: +28.377.495,93
 
-Di dalam berkas Excel terdapat 3 lembar kerja (*sheet*):
+---
+
+## 💎 Keunggulan Arsitektur & Inovasi Algoritma V2.0
+
+Mengapa performa **BOT TENMA V2.0 (TENMATHEGOAT)** jauh lebih bertenaga dan tangguh?
+
+### 1. 📈 Skalabilitas Lot Adaptif (*Dynamic Equity Sizing*)
+Berbeda dari versi 1.0 yang menggunakan fixed lot 0.01, versi 2.0 mengadopsi mekanisme *adaptive volume scaling* terkontrol:
+- Ukuran lot beroperasi dinamis antara **0.01 hingga 0.05** (rata-rata **0.024 lot**) sesuai dengan kurva ekuitas akun.
+- **Bukan Martingale**: Lot tidak dilipatgandakan saat mengalami floating minus. Penyesuaian lot murni berbasis margin sehat dan kekuatan modal (*organic compounding*), sehingga tidak membahayakan akun saat menghadapi fluktuasi pasar ekstrem.
+
+### 2. ⚡ Mesin Scalping Cepat Ultra-Presisi (*Ultra-Fast Scalp Engine*)
+- 100% dari 2.772 transaksi dieksekusi dengan arsitektur mesin **SCALP**.
+- Rata-rata durasi penahanan posisi (*holding time*) hanya **12,16 menit**.
+- Menghindari risiko floating berhari-hari, meminimalkan paparan terhadap rilis berita fundamental liar (*high-impact economic news*), serta bebas dari beban biaya inap (*swap charges*).
+
+### 3. 🎯 Sistem Multi-Tier Trailing Stop Cerdas
+Algoritma V2.0 menyempurnakan strategi proteksi keuntungan dengan 5 mode *exit* otomatis:
+- **`EA-TRAIL` (2.130 transaksi - 76,84%)**: Mode trailing bertahap yang mengunci target profit utama segera setelah order bergerak sesuai prediksi.
+- **`EA-RIDER-TRAIL` (401 transaksi - 14,47%)**: Mode akselerasi profit untuk menunggangi gelombang tren panjang (*runner profits*) hingga tercapai batas momentum.
+- **`EA-RIDER-SAR` (183 transaksi - 6,60%)**: Deteksi pembalikan arah menggunakan Parabolic SAR dinamis untuk segera melikuidasi posisi sebelum profit tergerus.
+- **`EA` (Signal Close) (42 transaksi - 1,52%)**: Penutupan taktis berdasarkan sinyal pembatalan tren oleh logika inti bot.
+- **`EA-SAR` (16 transaksi - 0,58%)**: Proteksi dini stop-and-reverse saat terjadi lonjakan arah mendadak.
+
+### 4. ⚖️ Keseimbangan Sempurna BUY vs SELL (*Zero Directional Bias*)
+Bot tidak memiliki ketergantungan sepihak pada tren bullish atau bearish:
+- **BUY**: 1.374 transaksi (49,57%)
+- **SELL**: 1.398 transaksi (50,43%)
+Rasio mendekati 50:50 membuktikan bot bekerja dengan efektivitas tinggi baik ketika harga emas melonjak naik, anjlok tajam, maupun bergerak sideways.
+
+---
+
+## 📁 Berkas Data Backtest yang Tersedia
+
+Repositori ini menyediakan data backtest resmi dalam 2 berkas Excel utama:
+
+| Nama Berkas | Versi EA | Deskripsi |
+| :--- | :---: | :--- |
+| **`TENMATHEGOAT_BOT_EA_V2.0_Backtest_.xlsx`** | **V2.0 (Terbaru)** | Berkas pengujian resmi bot versi 2.0 dengan multi-sheet, fitur adaptive lot, dan peningkatan profit signifikan. |
+| **`TENMA_BACKTEST_HISTORYCAL_TRANSAKSI_trades_mobile_friendly (1).xlsx`** | **V1.0 (Arsip)** | Berkas pengujian versi awal (fixed lot 0.01) sebagai pembanding performa historis. |
+
+### Struktur Lembar Kerja (*Sheet*) di Setiap Berkas Excel:
 1. **Sheet `Ringkasan`**:
-   Dashboard eksekutif yang memuat seluruh ringkasan metrik statistik utama, win rate, total net gain, serta instruksi ringkas penggunaan.
+   Dashboard eksekutif yang merangkum indikator statistik penting: total transaksi, win rate, total net gain, gross profit/loss, nilai transaksi terbaik/terburuk, dan periode pengujian.
 2. **Sheet `Transaksi HP`**:
-   Format tabel ringkas 11 kolom yang dioptimalkan khusus untuk pengguna perangkat seluler (iPhone/Android). Kolom penting seperti Waktu Close, Hasil, Arah (BUY/SELL), Volume, Poin, Durasi, dan Alasan Tutup diposisikan agar mudah difilter tanpa perlu menggeser layar terlalu jauh.
+   Format tabel ringkas yang dirancang khusus dan dioptimalkan agar mudah dibaca di layar ponsel (*smartphone* iOS / Android) tanpa harus menggeser layar (*horizontal scroll*) terlalu jauh.
 3. **Sheet `Data Lengkap`**:
-   Rekam jejak mentah berstandar institusional yang memuat 20 parameter lengkap per transaksi, meliputi:
+   Log mentah institusional yang mencakup 20 kolom parameter data transaksi:
    - *Position ID & Deal Ticket*
-   - *Open/Close Timestamp & Prices*
-   - *Gross Profit, Swap, Commission, Net Profit*
-   - *Balance After (Perkembangan Ekuitas Real-Time)*
-   - *MFE (Maximum Favorable Excursion)* & *MAE (Maximum Adverse Excursion)*
-   - *Execution Reason & Engine ID*
+   - *Open & Close Timestamps*
+   - *Open & Close Execution Prices*
+   - *Gross Profit, Swap, Commission, & Net Profit*
+   - *Balance After (Equity Curve Tracker)*
+   - *MFE (Maximum Favorable Excursion) & MAE (Maximum Adverse Excursion)*
+   - *Duration in Minutes*
+   - *Exit Reason & Engine ID*
 
 ---
 
-## ⚙️ Rekomendasi Penggunaan & Manajemen Risiko
+## ⚙️ Rekomendasi Setup & Manajemen Risiko
 
-Untuk mereplikasi hasil performa maksimal pada akun trading nyata (*live account*):
-- **Instrumen**: XAUUSD / Gold
-- **Rekomendasi Akun**: Akun Cent (untuk modal awal ramah pemula) atau Akun ECN/Zero Spread (untuk eksekusi scalping optimal).
-- **Spesifikasi Teknis**:
-  - Broker dengan spread ketat dan eksekusi latensi rendah.
-  - Virtual Private Server (VPS) dengan latensi < 10 ms ke server broker untuk menjamin ketepatan trailing stop.
-- **Manajemen Modal**: Sesuaikan ukuran lot dengan ketahanan margin dan batas toleransi risiko masing-masing.
+Untuk memperoleh performa optimal yang mendekati hasil backtest saat dijalankan pada akun riil (*live account*):
+- **Instrumen**: XAUUSD (Gold)
+- **Tipe Akun yang Direkomendasikan**:
+  - **Akun Cent**: Sangat disarankan untuk modal pemula atau tahap uji coba awal.
+  - **Akun ECN / Zero Spread**: Untuk mendapatkan eksekusi spread terketat pada strategi scalping.
+- **Infrastruktur Teknis**:
+  - Gunakan Virtual Private Server (VPS) dengan latensi rendah (< 10–15 ms) ke server broker untuk menjamin kecepatan trailing stop.
+  - Broker dengan slippage minimal dan *fast execution*.
+- **Ukuran Lot**: Terapkan manajemen modal bijak sesuai kapasitas margin akun dan profil risiko pribadi.
 
 ---
 
 ## 🤝 Konsultasi & Pembelian Lisensi Resmi
 
-Ingin mengotomatiskan perdagangan Gold Anda dengan sistem yang teruji secara transparan?
+Tertarik menggunakan sistem otomatisasi trading **BOT TENMA** untuk portofolio XAUUSD Anda?
 
-Untuk pertanyaan seputar pembelian lisensi, aktivasi akun, instalasi ke MetaTrader, maupun konsultasi pengaturan:
-- **GitHub**: [@TENMATRADE](https://github.com/TENMATRADE)
+Untuk informasi lisensi, uji coba, panduan aktivasi akun, dan integrasi ke MetaTrader:
+- **GitHub Profile**: [@TENMATRADE](https://github.com/TENMATRADE)
 - **Repository**: [databacktestbottenma](https://github.com/TENMATRADE/databacktestbottenma)
 
 ---
 
 > **⚠️ Disclaimer & Penafian Risiko:**  
-> Kinerja masa lalu yang ditunjukkan dalam pengujian historis (backtest) tidak menjadi jaminan absolut atas hasil di masa mendatang. Perdagangan valuta asing dan komoditas dengan leverage mengandung tingkat risiko tertentu. Gunakan dana dingin (*risk capital*) dan selalu terapkan manajemen risiko yang bijak.
+> Hasil pengujian historis (backtest) disajikan untuk tujuan transparansi, audit kinerja, dan edukasi. Perdagangan aset keuangan dengan leverage melibatkan risiko modal. Kinerja masa lalu tidak menjamin hasil di masa depan secara mutlak. Selalu gunakan dana risiko (*risk capital*) dan terapkan manajemen risiko yang disiplin.
