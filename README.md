@@ -5,10 +5,11 @@ Selamat datang di repositori data verifikasi resmi **BOT TENMA** (termasuk rilis
 Seluruh data disajikan secara terbuka dan transparan dalam format Microsoft Excel (`.xlsx`) multi-sheet (termasuk sheet khusus ramah pengguna *smartphone* / *mobile-friendly*), dilengkapi tangkapan layar verifikasi resmi dari MetaTrader Strategy Tester agar calon pengguna, investor, dan mitra lisensi dapat mengaudit setiap metrik secara independen.
 
 > [!IMPORTANT]
-> **Spesifikasi Mata Uang Akun Pengujian (USC / Exness Cent):**  
-> Pengujian historis pada repositori ini menggunakan basis mata uang **USC (USD Cent)**, khususnya pada **Akun Exness Cent (USC)** di mana:  
-> $$\mathbf{10.000\ \text{USC} = \$100\ \text{USD}}$$  
-> Artinya, pengujian 1 tahun penuh dijalankan dengan **deposit awal riil hanya sebesar \$100 USD (10.000 USC)** dan berhasil bertumbuh menjadi **\$35.027,16 USD (3.502.716 USC)**. Hal ini membuktikan bahwa strategi **BOT TENMA** sangat ramah modal bagi trader ritel namun memiliki daya ungkit *compounding* yang luar biasa kuat dan terukur.
+> **Klarifikasi Spesifikasi Mata Uang Akun Pengujian:**  
+> - **Uji Coba 1 Tahun Penuh (13.406 Transaksi)**: Menggunakan **Akun Exness Cent (USC)** di mana:  
+>   $$\mathbf{10.000\ \text{USC} = \$100\ \text{USD}}$$  
+>   Pengujian 1 tahun penuh dijalankan dengan **deposit awal riil hanya sebesar \$100 USD (10.000 USC)** dan berhasil bertumbuh menjadi **\$35.027,16 USD (3.502.716 USC)** (ROI **+34.927,16%**).  
+> - **Dua Uji Coba 2 Bulan (Versi 1.0 & Versi 2.0)**: Menggunakan akun dengan basis mata uang **IDR (Rupiah)** dengan modal awal terjangkau **Rp 1.000.000**, yang berhasil bertumbuh menjadi **Rp 26.930.943,99** (V1.0) dan **Rp 39.799.467,01** (V2.0).
 
 ---
 
@@ -69,21 +70,26 @@ Berdasarkan data audit eksekusi sepanjang tahun 2026:
 
 ## 📊 Perbandingan Komprehensif Antar Versi & Periode
 
-Tabel berikut merangkum evolusi performa dari rilis V1.0, V2.0 (Uji 2 Bulan), hingga V2.0 (Uji 1 Tahun Penuh):
+Tabel berikut merangkum evolusi performa dari rilis V1.0, V2.0 (Uji 2 Bulan berbasis IDR), hingga V2.0 (Uji 1 Tahun Penuh berbasis Exness Cent USC):
 
 | Parameter / Metrik Kinerja | V1.0 (Fixed Lot 0.01) | V2.0 (Dynamic 0.01–0.05) | V2.0 (1 Tahun Compounding) |
 | :--- | :---: | :---: | :---: |
-| **Tipe Akun / Satuan** | Akun Cent (USC) | Akun Cent (USC) | **Exness Cent (USC: 10k = \$100)** |
+| **Basis Mata Uang Akun** | **IDR (Rupiah)** | **IDR (Rupiah)** | **Exness Cent (USC: 10k = \$100)** |
 | **Periode Data** | 01 Sep 2026 – 02 Nov 2026 | 01 Sep 2026 – 02 Nov 2026 | **02 Jan 2026 – 05 Nov 2026** |
 | **Durasi Pengujian** | 2 Bulan | 2 Bulan | **~10+ Bulan (1 Tahun)** |
 | **Total Transaksi** | 2.773 Posisi | 2.772 Posisi | **13.406 Posisi** |
-| **Modal Awal** | 1.000.000 USC (\$10.000) | 1.000.000 USC (\$10.000) | **10.000 USC (\$100 USD)** |
-| **Saldo Akhir** | 26.930.943,99 USC | 39.799.467,01 USC | **3.502.716 USC (\$35.027,16)** |
-| **Total Net Profit** | +25.930.943,99 USC | +38.799.467,01 USC | **+3.492.716 USC (+\$34.927,16)** |
-| **ROI (Return on Investment)** | +2.593,09% | +3.879,95% | **+34.927,16%** |
+| **Modal Awal (Initial Deposit)** | **Rp 1.000.000** | **Rp 1.000.000** | **10.000 USC (\$100 USD)** |
+| **Saldo Akhir (Final Balance)** | **Rp 26.930.943,99** | **Rp 39.799.467,01** | **3.502.716 USC (\$35.027,16)** |
+| **Total Net Profit** | **+Rp 25.930.943,99** | **+Rp 38.799.467,01** | **+3.492.716 USC (+\$34.927,16)** |
+| **ROI (Return on Investment)** | **+2.593,09%** | **+3.879,95%** | **+34.927,16%** |
+| **Gross Profit** | Rp 61.591.544,51 | Rp 126.748.012,05 | 9.912.687 USC |
+| **Gross Loss** | -Rp 35.660.600,52 | -Rp 87.948.545,04 | -6.419.971 USC |
+| **Profit Factor** | 1.73 | 1.44 | **1.54** |
 | **Win Rate (Excl BEP)** | 87,13% | 88,21% | **87,65%** |
 | **Win Rate (Semua Order)** | 87,13% | 87,41% | **86,55%** |
-| **Profit Factor** | 1.73 | 1.44 | **1.54** |
+| **Rata-rata Net / Transaksi** | +Rp 9.351,22 | +Rp 13.996,92 | +260,53 USC (+\$2,61 USD) |
+| **Transaksi Terbaik** | +Rp 1.207.225,63 | +Rp 1.693.740,11 | +50.643 USC (+\$506,43 USD) |
+| **Transaksi Terburuk** | -Rp 579.534,87 | -Rp 2.022.745,98 | -76.243 USC (-\$762,43 USD) |
 | **Sharpe Ratio** | - | - | **10.62** |
 | **Recovery Factor** | - | - | **24.73** |
 | **Rata-rata Holding Time** | ~12 Menit | ~12,16 Menit | **~13,11 Menit** |
@@ -125,11 +131,11 @@ Rasio seimbang ini memastikan bahwa algoritma tidak terjebak dalam bias sepihak 
 
 Repositori ini memuat 3 berkas Excel resmi:
 
-| Nama Berkas | Periode Pengujian | Ukuran Sampel | Karakteristik Utama |
-| :--- | :---: | :---: | :--- |
-| **`TENMATHEGOAT_BOT_EA_V2.0_Backtest_1tahun.xlsx`** | **02 Jan 2026 – 05 Nov 2026** | **13.406 Posisi** | **Uji Ketahanan 1 Tahun**: Akun Exness Cent (10k USC = \$100), Sharpe Ratio 10.62, ROI +34.927%. |
-| **`TENMATHEGOAT_BOT_EA_V2.0_Backtest_.xlsx`** | 01 Sep 2026 – 02 Nov 2026 | 2.772 Posisi | **Uji Intensif 2 Bulan V2.0**: Peningkatan win rate 88,21% dan adaptive lot 0.01–0.05. |
-| **`TENMA_BACKTEST_HISTORYCAL_TRANSAKSI_trades_mobile_friendly (1).xlsx`** | 01 Sep 2026 – 02 Nov 2026 | 2.773 Posisi | **Arsip Uji V1.0**: Baseline performa awal dengan fixed lot 0.01. |
+| Nama Berkas | Periode Pengujian | Basis Mata Uang | Sampel Transaksi | Karakteristik Utama |
+| :--- | :---: | :---: | :---: | :--- |
+| **`TENMATHEGOAT_BOT_EA_V2.0_Backtest_1tahun.xlsx`** | **02 Jan 2026 – 05 Nov 2026** | **Exness Cent (USC)** | **13.406 Posisi** | **Uji Ketahanan 1 Tahun**: 10k USC = \$100 USD, Sharpe 10.62, ROI +34.927%. |
+| **`TENMATHEGOAT_BOT_EA_V2.0_Backtest_.xlsx`** | 01 Sep 2026 – 02 Nov 2026 | **IDR (Rupiah)** | 2.772 Posisi | **Uji 2 Bulan V2.0**: Modal Rp 1 Juta jadi Rp 39,8 Juta, win rate 88,21%, adaptive lot. |
+| **`TENMA_BACKTEST_HISTORYCAL_TRANSAKSI_trades_mobile_friendly (1).xlsx`** | 01 Sep 2026 – 02 Nov 2026 | **IDR (Rupiah)** | 2.773 Posisi | **Arsip Uji V1.0**: Modal Rp 1 Juta jadi Rp 26,9 Juta dengan fixed lot 0.01. |
 
 ### Struktur Lembar Kerja (*Sheet*) di Dalam Berkas Excel:
 1. **Sheet `Ringkasan`**:
@@ -153,11 +159,14 @@ Repositori ini memuat 3 berkas Excel resmi:
 
 Untuk memperoleh performa optimal saat bot dioperasikan pada akun riil (*live account*):
 - **Instrumen**: XAUUSD (Gold)
-- **Rekomendasi Akun**:
-  - **Akun Exness Cent (USC)** *(Sangat Direkomendasikan)*:
-    - Deposit awal cukup **\$100 USD** (akan terkonversi otomatis menjadi **10.000 USC** di terminal MT4/MT5).
+- **Pilihan Tipe Akun yang Direkomendasikan**:
+  - **Akun Exness Cent (USC)** *(Sangat Direkomendasikan untuk Akun Berbasis USD)*:
+    - Deposit awal cukup **\$100 USD** (otomatis terbaca sebagai **10.000 USC** di terminal MT4/MT5).
     - Memungkinkan eksekusi lot mikro secara leluasa dan memberikan ketahanan margin yang sangat tinggi terhadap fluktuasi pasar emas.
-  - **Akun Standard / ECN / Zero Spread**: Untuk modal yang lebih besar (\$1.000+ USD) dengan spread terketat.
+  - **Akun IDR (Rupiah)** *(Bagi Pengguna Broker Lokal / Akun Berbasis Rupiah)*:
+    - Dapat dijalankan mulai dari modal terjangkau **Rp 1.000.000** (sesuai hasil uji coba 2 bulan V1.0 dan V2.0 yang terbukti bertumbuh hingga puluhan juta rupiah).
+  - **Akun Standard / ECN / Zero Spread (USD)**:
+    - Untuk modal yang lebih besar (\$1.000+ USD) dengan ketentuan spread terketat.
 - **Infrastruktur Teknis**:
   - Gunakan Virtual Private Server (VPS) dengan latensi rendah (< 10–15 ms) ke server broker untuk menjamin akurasi trailing stop.
   - Pilih broker dengan eksekusi cepat dan slippage minimal.
